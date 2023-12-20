@@ -13,18 +13,36 @@ namespace gsbRapports
 {
     public partial class ListeMedicament : Form
     {
-        private gsbrapportsEntities mesDonnees;
-        public ListeMedicament(gsbrapportsEntities mesDonnees)
+        private gsb2023Entities mesDonnees;
+        public ListeMedicament(gsb2023Entities mesDonnees)
         {
             InitializeComponent();
             this.mesDonnees = mesDonnees;
-            this.dataGridView1.DataSource = mesDonnees.medicaments.ToList();
+            this.dListeMedicaments.DataSource = mesDonnees.medicaments.ToList();
         }
-
+        public DataGridView DListeMedicaments
+        {
+            get { return this.dListeMedicaments; }
+            set { this.dListeMedicaments = value; }
+        }
+        public void MettreAJourMedicaments(List<medicament> medicaments)
+        {
+            this.dListeMedicaments.DataSource = medicaments;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.bdgMedicament.EndEdit();
             this.mesDonnees.SaveChanges();
+        }
+
+        private void bdgMedicament_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

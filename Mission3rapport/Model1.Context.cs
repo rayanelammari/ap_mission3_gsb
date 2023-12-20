@@ -13,10 +13,10 @@ namespace Mission3rapport
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class gsbrapportsEntities : DbContext
+    public partial class gsb2023Entities : DbContext
     {
-        public gsbrapportsEntities()
-            : base("name=gsbrapportsEntities")
+        public gsb2023Entities()
+            : base("name=gsb2023Entities")
         {
         }
     
@@ -30,6 +30,7 @@ namespace Mission3rapport
         public virtual DbSet<medicament> medicaments { get; set; }
         public virtual DbSet<offrir> offrirs { get; set; }
         public virtual DbSet<rapport> rapports { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<visiteur> visiteurs { get; set; }
     }
 }

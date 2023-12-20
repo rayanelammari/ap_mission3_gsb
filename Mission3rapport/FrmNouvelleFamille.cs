@@ -13,8 +13,8 @@ namespace Mission3rapport
 {
     public partial class FrmNouvelleFamille : Form
     {
-        private gsbrapportsEntities mesDonnees;
-        public FrmNouvelleFamille (gsbrapportsEntities mesDonnees)
+        private gsb2023Entities mesDonnees;
+        public FrmNouvelleFamille (gsb2023Entities mesDonnees)
         {
             InitializeComponent();
             this.mesDonnees = mesDonnees;

@@ -6,11 +6,11 @@ namespace gsbRapports
 {
     public partial class FrmMenu : Form
     {
-        private gsbrapportsEntities mesDonnees;
+        private gsb2023Entities mesDonnees;
         public FrmMenu()
         {
             this.InitializeComponent();
-            this.mesDonnees = new gsbrapportsEntities();
+            this.mesDonnees = new gsb2023Entities();
             this.IsMdiContainer = true;
         }
 
