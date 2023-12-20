@@ -20,15 +20,12 @@ namespace gsbRapports
             this.mesDonnees = mesDonnees;
             this.dListeMedicaments.DataSource = mesDonnees.medicaments.ToList();
         }
-        public DataGridView DListeMedicaments
-        {
-            get { return this.dListeMedicaments; }
-            set { this.dListeMedicaments = value; }
-        }
+  
         public void MettreAJourMedicaments(List<medicament> medicaments)
         {
             this.dListeMedicaments.DataSource = medicaments;
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.bdgMedicament.EndEdit();

@@ -22,28 +22,13 @@ namespace gsbRapports
         // Supprimez le deuxième appel à InitializeComponent() dans le bouton2_Click
         private void button2_Click(object sender, EventArgs e)
         {
-            ListeMedicament lstMedoc = new ListeMedicament(this.mesDonnees);
-            lstMedoc.Show();
+            famille selectFamille = comboBox1.SelectedItem as famille;
 
-        }
-
-
-
-        private void btnAjouter_Click(object sender, EventArgs e)
-        {
-            FrmNouvelleFamille F2 = new FrmNouvelleFamille(this.mesDonnees);
-            F2.Show();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            famille select = comboBox1.SelectedItem as famille;
-
-            if (select != null)
+            if (selectFamille != null)
             {
                 var query = from medicament in mesDonnees.medicaments
-                                         where medicament.famille.id == select.id
-                                         select medicament;
+                            where medicament.famille.id == selectFamille.id
+                            select medicament;
 
                 // Convertir les résultats en liste
                 var listeMedicaments = query.ToList();
@@ -64,6 +49,13 @@ namespace gsbRapports
             }
 
         }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+            FrmNouvelleFamille F2 = new FrmNouvelleFamille(this.mesDonnees);
+            F2.Show();
+        }
+
 
     }
 

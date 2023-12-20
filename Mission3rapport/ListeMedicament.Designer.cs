@@ -31,15 +31,15 @@ namespace gsbRapports
         {
             this.components = new System.ComponentModel.Container();
             this.dListeMedicaments = new System.Windows.Forms.DataGridView();
-            this.bdgMedicament = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomCommercial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idFamille = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.composition = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.effets = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contreIndications = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdgMedicament = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dListeMedicaments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgMedicament)).BeginInit();
             this.SuspendLayout();
@@ -56,18 +56,13 @@ namespace gsbRapports
             this.effets,
             this.contreIndications});
             this.dListeMedicaments.DataSource = this.bdgMedicament;
-            this.dListeMedicaments.Location = new System.Drawing.Point(66, 58);
+            this.dListeMedicaments.Location = new System.Drawing.Point(12, 48);
             this.dListeMedicaments.Name = "dListeMedicaments";
             this.dListeMedicaments.RowHeadersWidth = 51;
             this.dListeMedicaments.RowTemplate.Height = 24;
-            this.dListeMedicaments.Size = new System.Drawing.Size(644, 316);
+            this.dListeMedicaments.Size = new System.Drawing.Size(1104, 369);
             this.dListeMedicaments.TabIndex = 0;
             this.dListeMedicaments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // bdgMedicament
-            // 
-            this.bdgMedicament.DataSource = typeof(Mission3rapport.medicament);
-            this.bdgMedicament.CurrentChanged += new System.EventHandler(this.bdgMedicament_CurrentChanged);
             // 
             // label1
             // 
@@ -81,21 +76,13 @@ namespace gsbRapports
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(219, 404);
+            this.button1.Location = new System.Drawing.Point(12, 423);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 37);
             this.button1.TabIndex = 2;
             this.button1.Text = "Enregistrer";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // nomCommercial
             // 
@@ -137,11 +124,24 @@ namespace gsbRapports
             this.contreIndications.Name = "contreIndications";
             this.contreIndications.Width = 125;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // bdgMedicament
+            // 
+            this.bdgMedicament.DataSource = typeof(Mission3rapport.medicament);
+            this.bdgMedicament.CurrentChanged += new System.EventHandler(this.bdgMedicament_CurrentChanged);
+            // 
             // ListeMedicament
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1128, 472);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dListeMedicaments);

@@ -69,7 +69,6 @@ namespace gsbRapports
             this.comboBox1.Size = new System.Drawing.Size(210, 39);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.ValueMember = "id";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button2
             // 
