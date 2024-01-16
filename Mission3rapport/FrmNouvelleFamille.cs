@@ -25,7 +25,7 @@ namespace Mission3rapport
         private famille newFamille()
         {
             famille newFamille = new famille();
-            newFamille.id = txtId.Text;
+            newFamille.id = Convert.ToString(txtId.Text);
             newFamille.libelle = txtNomFamille.Text;
             return newFamille;
         }

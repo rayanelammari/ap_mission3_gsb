@@ -23,14 +23,6 @@ namespace gsbRapports
             F2.Show();
         }
 
-        private void gérerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-          
-        }
+  
     }
 }

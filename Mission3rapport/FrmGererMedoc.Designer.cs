@@ -32,10 +32,10 @@ namespace gsbRapports
             this.components = new System.ComponentModel.Container();
             this.bdgGereMedoc = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAjouter = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.bdgGereMedoc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,23 +52,6 @@ namespace gsbRapports
             this.label1.Size = new System.Drawing.Size(243, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Gérer les familles";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bdgGereMedoc, "id", true));
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgGereMedoc, "id", true));
-            this.comboBox1.DataSource = this.bdgGereMedoc;
-            this.comboBox1.DisplayMember = "id";
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.DropDownWidth = 150;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Location = new System.Drawing.Point(44, 165);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(210, 39);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.ValueMember = "id";
             // 
             // button2
             // 
@@ -104,16 +87,27 @@ namespace gsbRapports
             this.btnAjouter.UseVisualStyleBackColor = false;
             this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.bdgGereMedoc;
+            this.comboBox1.DisplayMember = "id";
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(31, 176);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(165, 37);
+            this.comboBox1.TabIndex = 7;
+            // 
             // FrmGererMedoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Name = "FrmGererMedoc";
             this.Text = "FrmGererMedoc";
@@ -127,9 +121,9 @@ namespace gsbRapports
 
         private System.Windows.Forms.BindingSource bdgGereMedoc;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAjouter;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

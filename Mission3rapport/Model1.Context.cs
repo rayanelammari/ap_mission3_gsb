@@ -30,7 +30,6 @@ namespace Mission3rapport
         public virtual DbSet<medicament> medicaments { get; set; }
         public virtual DbSet<offrir> offrirs { get; set; }
         public virtual DbSet<rapport> rapports { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<visiteur> visiteurs { get; set; }
     }
 }

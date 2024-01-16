@@ -58,6 +58,12 @@
     <Compile Include="famille.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="FrmAjouterMedicament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjouterMedicament.Designer.cs">
+      <DependentUpon>FrmAjouterMedicament.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGererMedoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,7 +85,7 @@
     <Compile Include="ListeMedicament.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListeMedicament.designer.cs">
+    <Compile Include="ListeMedicament.Designer.cs">
       <DependentUpon>ListeMedicament.cs</DependentUpon>
     </Compile>
     <Compile Include="medecin.cs">
@@ -111,12 +117,12 @@
     <Compile Include="rapport.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="visiteur.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmAjouterMedicament.resx">
+      <DependentUpon>FrmAjouterMedicament.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGererMedoc.resx">
       <DependentUpon>FrmGererMedoc.cs</DependentUpon>
     </EmbeddedResource>

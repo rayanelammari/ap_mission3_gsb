@@ -55,16 +55,6 @@
           <Property Name="idVisiteur" Type="char" MaxLength="4" Nullable="false" />
           <Property Name="idMedecin" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
         <EntityType Name="visiteur">
           <Key>
             <PropertyRef Name="id" />
@@ -145,7 +135,6 @@
           <EntitySet Name="medicament" EntityType="Self.medicament" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="offrir" EntityType="Self.offrir" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="rapport" EntityType="Self.rapport" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="visiteur" EntityType="Self.visiteur" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="medicament_fk" Association="Self.medicament_fk">
             <End Role="famille" EntitySet="famille" />
@@ -231,16 +220,6 @@
           <NavigationProperty Name="offrirs" Relationship="Self.offrir_fk1" FromRole="rapport" ToRole="offrir" />
           <NavigationProperty Name="visiteur" Relationship="Self.rapport_fk1" FromRole="rapport" ToRole="visiteur" />
         </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="visiteur">
           <Key>
             <PropertyRef Name="id" />
@@ -322,7 +301,6 @@
           <EntitySet Name="medicaments" EntityType="Self.medicament" />
           <EntitySet Name="offrirs" EntityType="Self.offrir" />
           <EntitySet Name="rapports" EntityType="Self.rapport" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="visiteurs" EntityType="Self.visiteur" />
           <AssociationSet Name="medicament_fk" Association="Self.medicament_fk">
             <End Role="famille" EntitySet="familles" />
@@ -402,17 +380,6 @@
                 <ScalarProperty Name="bilan" ColumnName="bilan" />
                 <ScalarProperty Name="idVisiteur" ColumnName="idVisiteur" />
                 <ScalarProperty Name="idMedecin" ColumnName="idMedecin" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="gsb2023Model.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

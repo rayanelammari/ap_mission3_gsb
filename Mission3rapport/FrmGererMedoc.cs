@@ -14,8 +14,7 @@ namespace gsbRapports
         {
             InitializeComponent();
             this.mesDonnees = mesDonnees;
-            //  var query = from id in famille.id
-            //            select id;
+    
             this.bdgGereMedoc.DataSource = mesDonnees.familles.ToList();
         }
 
@@ -47,6 +46,7 @@ namespace gsbRapports
                     lstMedoc.Show();
                 }
             }
+            
 
         }
 
@@ -56,7 +56,7 @@ namespace gsbRapports
             F2.Show();
         }
 
-
+   
     }
 
 
