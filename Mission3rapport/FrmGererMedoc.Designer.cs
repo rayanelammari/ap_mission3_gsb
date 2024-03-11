@@ -85,7 +85,7 @@ namespace gsbRapports
             this.btnAjouter.TabIndex = 6;
             this.btnAjouter.Text = "Ajouter une famille";
             this.btnAjouter.UseVisualStyleBackColor = false;
-            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click_1);
             // 
             // comboBox1
             // 
